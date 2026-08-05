@@ -1,6 +1,0 @@
-{
-  "name": "VTel Solutions",
-  "description": "Telecom RF Planning, Digital Mapping, and GIS Solutions for mobile operators, vendors, and engineering teams worldwide.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
