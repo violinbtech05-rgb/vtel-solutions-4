@@ -226,12 +226,12 @@ export const ContactSection: React.FC = () => {
                 </div>
 
                 <button
-                  type="submit"
-                  className="w-full py-3.5 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-slate-950 font-bold text-xs flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/20 cursor-pointer"
-                >
-                  <Send className="w-4 h-4" />
-                  <span>Submit Inquiry to VTel Engineering</span>
-                </button>
+  type="submit"
+  className="w-full py-3.5 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-slate-950 font-bold text-xs flex items-center justify-center gap-2 shadow-lg shadow-cyan-500/20 cursor-pointer"
+>
+  <Send className="w-4 h-4" />
+  <span>Submit Inquiry to VTel Engineering</span>
+</button>
 
               </form>
             )}
