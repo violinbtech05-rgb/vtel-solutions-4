@@ -94,7 +94,7 @@ export const ContactSection: React.FC = () => {
                 <Mail className="w-5 h-5 text-cyan-400 shrink-0" />
                 <div>
                   <div className="text-[10px] font-mono text-slate-400 uppercase">General Inquiries & Sales</div>
-                  <a href="mailto:info@vtel.co.in" className="font-bold text-slate-200 hover:text-cyan-400 transition-colors">
+                   <a href="mailto:info@vtel.co.in" className="font-bold text-slate-200 hover:text-cyan-400 transition-colors">
                     info@vtel.co.in
                   </a>
                 </div>
