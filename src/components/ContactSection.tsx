@@ -96,8 +96,8 @@ export const ContactSection: React.FC = () => {
                   <div className="text-[10px] font-mono text-slate-400 uppercase">General Inquiries & Sales</div>
 <a href="mailto:info@vtelsolution.com" className="font-bold text-slate-200 hover:text-cyan-400 transition-colors">
   info@vtelsolution.com
+</a>
 </div>
-
               <div className="flex items-center gap-3 p-3 rounded-2xl bg-slate-950 border border-slate-800">
                 <Globe className="w-5 h-5 text-cyan-400 shrink-0" />
                 <div>
