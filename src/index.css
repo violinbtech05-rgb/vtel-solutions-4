@@ -1,26 +1,18 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
-  :root {
-    --color-primary: #0284c7;
-    --color-secondary: #38bdf8;
-    --color-dark: #0b0f19;
-  }
-
-  html {
-    scroll-behavior: smooth;
-    color-scheme: dark;
-  }
-
-  body {
-    @apply bg-slate-950 text-slate-100 font-sans antialiased selection:bg-sky-500 selection:text-white;
-    overflow-x: hidden;
-  }
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
 }
 
-/* Custom Visible Scrollbar */
+body {
+  background-color: #020617;
+  color: #f1f5f9;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Bright Cyan Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -46,7 +38,7 @@
   scrollbar-color: #38bdf8 #0b0f19;
 }
 
-/* Custom Utilities & Background Patterns */
+/* Background Patterns */
 .bg-tech-grid {
   background-size: 32px 32px;
   background-image: 
