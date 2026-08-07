@@ -57,10 +57,37 @@ export const QuotePortalModal: React.FC<QuotePortalModalProps> = ({
     }
   };
 
-  const handleFinalSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
+  const handleFinalSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  try {
+    const response = await fetch('/api/quote', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        company,
+        product: selectedMapProducts.join(', ') || 'General Inquiry',
+        country: targetCountry,
+        message: `Area: ${areaSqKm} sq km | Resolution: ${resolution} | Software: ${softwareFormat} | Timeframe: ${deliveryTimeframe} | Notes: ${notes}`,
+      }),
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      setSubmitted(true);
+    } else {
+      alert('Failed to send quote request: ' + (result.error || 'Unknown error'));
+    }
+  } catch (error) {
+    console.error('Error submitting form:', error);
+    alert('Network error. Please try again later.');
+  }
+};
 
   return (
     <div className="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto animate-fadeIn">
