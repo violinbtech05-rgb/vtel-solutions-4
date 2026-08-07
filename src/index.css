@@ -1,86 +1,52 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
+  :root {
+    --color-primary: #0284c7;
+    --color-secondary: #38bdf8;
+    --color-dark: #0b0f19;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
   body {
-    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-  }
-
-  code, pre, .font-mono {
-    font-family: 'JetBrains Mono', monospace;
+    @apply bg-slate-950 text-slate-100 font-sans antialiased selection:bg-sky-500 selection:text-white;
+    overflow-x: hidden;
   }
 }
 
-.font-brand {
-  font-family: 'Outfit', 'Plus Jakarta Sans', system-ui, sans-serif;
-}
-
-.font-tech {
-  font-family: 'Space Grotesk', system-ui, sans-serif;
-}
-
-/* Leaflet map custom fixes */
-.leaflet-container {
-  width: 100%;
-  height: 100%;
-  border-radius: 0.75rem;
-  background: #0f172a !important;
-  font-family: 'Plus Jakarta Sans', sans-serif !important;
-  z-index: 10;
-}
-
-.leaflet-popup-content-wrapper, .leaflet-popup-tip {
-  background: #1e293b !important;
-  color: #f8fafc !important;
-  border: 1px solid #334155;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5) !important;
-}
-
-.leaflet-popup-content {
-  margin: 12px 16px !important;
-  font-size: 13px !important;
-  line-height: 1.5 !important;
-}
-
-/* Custom Leaflet Tooltip Styling for RF Stats */
-.custom-leaflet-rf-tooltip {
-  background: #ffffff !important;
-  color: #0f172a !important;
-  border: 1px solid #cbd5e1 !important;
-  border-radius: 12px !important;
-  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.2), 0 8px 10px -6px rgba(15, 23, 42, 0.1) !important;
-  padding: 4px !important;
-}
-
-.custom-leaflet-rf-tooltip::before {
-  border-top-color: #ffffff !important;
-}
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #090d16;
-}
-
+/* Custom Visible Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
+
 ::-webkit-scrollbar-track {
-  background: #0f172a;
+  background: #0b0f19;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #38bdf8;
   border-radius: 5px;
-  border: 2px solid #0f172a;
+  border: 2px solid #0b0f19;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #0284c7;
 }
+
+/* Firefox Scrollbar Support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #38bdf8 #0b0f19;
 }
 
-/* Tech grid background pattern */
+/* Custom Utilities & Background Patterns */
 .bg-tech-grid {
   background-size: 32px 32px;
   background-image: 
@@ -104,4 +70,3 @@
 .animate-pulse-subtle {
   animation: pulse-subtle 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
-
