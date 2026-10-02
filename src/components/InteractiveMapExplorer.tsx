@@ -156,7 +156,7 @@ export const InteractiveMapExplorer: React.FC<InteractiveMapExplorerProps> = ({ 
         L.control.zoom({ position: 'bottomright' }).addTo(map);
 
         // Add base tile layer
-        const darkTileUrl = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png';
+        const darkTileUrl = 'https://basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png?key=cb1_47s8_1_9cbf7222980d34b27a05968f';
         L.tileLayer(darkTileUrl, {
           attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
           maxZoom: 19,
