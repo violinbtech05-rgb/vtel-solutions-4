@@ -156,7 +156,7 @@ export const InteractiveMapExplorer: React.FC<InteractiveMapExplorerProps> = ({ 
         L.control.zoom({ position: 'bottomright' }).addTo(map);
 
         // Add base tile layer
-        const darkTileUrl = const darkTileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+        const darkTileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
         L.tileLayer(darkTileUrl, {
           attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
           maxZoom: 19,
